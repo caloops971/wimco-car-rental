@@ -1,0 +1,21 @@
+Options -Indexes
+
+# Forcer HTTPS en production
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirection des erreurs 404 vers index.php
+ErrorDocument 404 /index.php
+
+# Protection des fichiers sensibles
+<FilesMatch "^(config\.php|template\.php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Autoriser l'accès aux images et ressources statiques
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|css|js)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
