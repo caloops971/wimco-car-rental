@@ -1,6 +1,6 @@
 <?php
-// Configuration de l'API
-define('RENTCENTRIC_TOKEN', 'uSrAECOA2Pb5BXVGVo3uVdWeTvrhjW3x9ZNa_-CsGSw8B7XGfHVyn9hBQqQwACyhkFgpYbAOJQnSXm4pd1124sqV-CnhuEDlYPD2vrkfs4knuw5RRr6Q0KwLo5jgNHXvUPSKh2MYhBLLhHnnAMkan8RzPme-ytWNEyZ02LMVV-y5bm8mpUZ9Jp8_wcFUx7AGgQ8zEFTxzEzzixmBg2XaxsEzuRv5cOYeK43Tydp2NySGF4fQC6BIaB9d8VlFTnLnn5dGbMH2gs3vOXZwzgL1YEFOr9zZDLINAxwbxsWYu3dVCHbsW70iv2NagSYp_GjZ');
+// Configuration de l'API - COPIEZ CE FICHIER VERS config.php ET REMPLISSEZ VOS VRAIES VALEURS
+define('RENTCENTRIC_TOKEN', 'YOUR_RENTCENTRIC_API_TOKEN_HERE');
 define('RENTCENTRIC_API_VEHICLES_URL', 'https://www8.rentcentric.com/RcOnlineAPI_Client6042/api/VehicleType/GetAvailableVehicleTypesAndRates');
 
 // Configuration du partenaire

@@ -37,6 +37,11 @@ Thumbs.db
 vendor/
 composer.phar
 .env
+.env.local
+.env.production
+
+# Configuration files with sensitive data
+config.php
 
 # Temporary files
 *.tmp
