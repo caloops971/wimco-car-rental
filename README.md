@@ -46,7 +46,16 @@ git clone https://github.com/caloops971/wimco-car-rental.git
 cd wimco-car-rental
 ```
 
-2. Démarrer le serveur de développement
+2. **Configuration des secrets (IMPORTANT)**
+```bash
+# Copier le fichier de configuration template
+cp config.example.php config.php
+
+# Éditer config.php et remplacer 'REPLACE_WITH_YOUR_API_TOKEN' 
+# par votre vrai token RentCentric API
+```
+
+3. Démarrer le serveur de développement
 ```bash
 # Avec PHP intégré
 php -S localhost:8080 router.php
@@ -56,9 +65,23 @@ php -S localhost:8080 router.php
 # Démarrer Apache depuis le panneau XAMPP
 ```
 
-3. Ouvrir dans le navigateur
+4. Ouvrir dans le navigateur
 ```
 http://localhost:8080
+```
+
+## 🔒 Sécurité et Configuration
+
+### ⚠️ IMPORTANT - Gestion des secrets
+- **JAMAIS** commiter de tokens API ou mots de passe dans le code source
+- Utiliser `config.example.php` comme template
+- Le fichier `config.php` est exclu du versioning (.gitignore)
+- En production, utiliser des variables d'environnement
+
+### Configuration locale
+```php
+// Dans config.php
+define('RENTCENTRIC_TOKEN', 'VOTRE_VRAI_TOKEN_ICI');
 ```
 
 ## 📁 Structure du projet
@@ -119,6 +142,25 @@ service apache2 restart
 ## 📞 Support
 
 Pour toute question technique, consultez le code source ou ouvrez une issue sur GitHub.
+
+---
+
+## 🚀 Déployement
+
+**Site en production :** https://wimco.hertzstbarth.com
+
+### Configuration serveur
+- **Serveur :** Ubuntu 24.04 LTS
+- **Web Server :** Caddy v2 avec PHP-FPM
+- **PHP :** Version 8.3.6
+- **SSL :** Certificat Let's Encrypt automatique
+
+### Fonctionnalités validées
+- ✅ Recherche de véhicules en temps réel
+- ✅ Intégration API RentCentric opérationnelle
+- ✅ Validation complète des formulaires
+- ✅ Réservations en ligne fonctionnelles
+- ✅ Design responsive et sécurisé
 
 ---
 
